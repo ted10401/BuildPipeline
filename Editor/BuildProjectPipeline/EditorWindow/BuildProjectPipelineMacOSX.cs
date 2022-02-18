@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 
-namespace JSLCore.BuildPipeline
+namespace TEDCore.BuildPipeline
 {
     public class BuildProjectPipelineMacOSX
     {

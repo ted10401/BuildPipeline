@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 
-namespace JSLCore.BuildPipeline
+namespace TEDCore.BuildPipeline
 {
     [HideReferenceObjectPicker]
     public class BuildProjectPipeline : Pipeline<BuildProjectPipeline, IBuildProjectStep>

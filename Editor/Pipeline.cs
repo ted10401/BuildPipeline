@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JSLCore.BuildPipeline
+namespace TEDCore.BuildPipeline
 {
     public abstract class Pipeline<TPipeline, TStep> : ISerializationCallbackReceiver
         where TPipeline : Pipeline<TPipeline, TStep>

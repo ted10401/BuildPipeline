@@ -1,5 +1,5 @@
 {
-    "name": "JSLCore.BuildPipeline.Editor",
+    "name": "TEDCore.BuildPipeline.Editor",
     "references": [],
     "includePlatforms": [
         "Editor"

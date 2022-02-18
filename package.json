@@ -1,5 +1,5 @@
 {
-  "name": "com.jslcore.buildpipeline",
+  "name": "com.tedcore.buildpipeline",
   "version": "1.0.0",
   "displayName": "Build Pipeline",
   "description": "Help you to create custom build pipelijne",

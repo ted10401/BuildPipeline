@@ -1,5 +1,5 @@
 ﻿
-namespace JSLCore.BuildPipeline
+namespace TEDCore.BuildPipeline
 {
     public class BuildTargetPathTracker
     {

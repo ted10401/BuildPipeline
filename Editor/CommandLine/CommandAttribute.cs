@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JSLCore.BuildPipeline
+namespace TEDCore.BuildPipeline
 {
     public class CommandAttribute : Attribute
     {
