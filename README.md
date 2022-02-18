@@ -1,4 +1,6 @@
 # BuildPipeline
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/dauxio/daux.io/blob/master/LICENSE.md)
+[![Releases](https://img.shields.io/github/release/ted10401/BuildPipeline.svg)](https://github.com/ted10401/BuildPipeline/releases)
 The **BuildPipeline** module provides an easy way to customize the build pipeline.<br/>
 The module need to cooperate with [Odin - Inspector and Serializer](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041).
 
