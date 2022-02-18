@@ -93,43 +93,8 @@ namespace TEDCore.Pipeline
 }
 ```
 
-## Exmaple - Create Editor Window
+## Exmaple - Editor Window
 After you have created a new custom build project pipeline, if you want to create an Editor Window, you can add **[CreateBuildProjectPipeline]** attribute to the static method which returns **BuildProjectPipeline** and the Editor Window would create directly.
-```csharp
-using System;
-using UnityEditor;
-using UnityEditor.Build.Reporting;
-
-namespace TEDCore.Pipeline
-{
-    public class BuildProjectPipelineWindows64
-    {
-        public static void Build()
-        {
-            Build(Environment.GetCommandLineArgs());
-        }
-
-        private static void Build(string[] commandLineArgs)
-        {
-            CommandLineParser commandLineParser = new CommandLineParser(commandLineArgs);
-
-            BuildProjectPipeline projectBuilder = CreatePipeline();
-            BuildReport buildReport = projectBuilder.Execute(commandLineParser);
-            EditorApplication.Exit(buildReport.summary.result == BuildResult.Succeeded ? 0 : 1);
-        }
-
-        [CreateBuildProjectPipeline]
-        private static BuildProjectPipeline CreatePipeline()
-        {
-            return BuildProjectPipeline.Create(BuildTarget.StandaloneWindows64)
-                .AddBundleVersionBuildProjectStep()
-                .AddTargetPathBuildProjectStep()
-                .AddDevelopmentBuildProjectStep()
-                .AddAllowDebuggingBuildProjectStep();
-        }
-    }
-}
-```
 <img src="GithubResources/01.Build_Project_Pipeline_Editor_Window.jpg" />
 
 ## Example - Batch Script
