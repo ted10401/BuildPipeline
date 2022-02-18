@@ -20,7 +20,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace TEDCore.Pipeline
+namespace TEDCore.BuildPipeline
 {
     public static class SetDevelopmentBuildProjectStepUtility
     {
@@ -31,12 +31,12 @@ namespace TEDCore.Pipeline
     }
 
     [Serializable, HideReferenceObjectPicker]
-    public class SetDevelopmentBuildProjectStep : IBuildProjectStep
+    public class SetDevelopmentBuildProjectStep : BuildProjectStep
     {
         [Command("-development")]
         [SerializeField] private bool m_development = true;
 
-        public void Execute(
+        public override void Execute(
             BuildTargetPathTracker buildTargetPathTracker,
             BuildOptionTracker buildOptionTracker,
             CommandLineParser commandLineParser)
@@ -60,7 +60,6 @@ namespace TEDCore.Pipeline
 ```csharp
 using System;
 using UnityEditor;
-using UnityEditor.Build.Reporting;
 
 namespace TEDCore.BuildPipeline
 {

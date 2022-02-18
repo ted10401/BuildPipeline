@@ -14,7 +14,7 @@ namespace TEDCore.BuildPipeline
     }
 
     [Serializable, HideReferenceObjectPicker]
-    public class SetAndroidKeyStoreBuildStepBuildProjectStep : IBuildProjectStep
+    public class SetAndroidKeyStoreBuildStepBuildProjectStep : BuildProjectStep
     {
         [Command("-keystoreName")]
         [SerializeField] private string m_keystoreName = default;
@@ -28,7 +28,7 @@ namespace TEDCore.BuildPipeline
         [Command("-keyaliasPass")]
         [SerializeField] private string m_keyaliasPass = default;
 
-        public void Execute(
+        public override void Execute(
             BuildTargetPathTracker buildTargetPathTracker,
             BuildOptionTracker buildOptionTracker,
             CommandLineParser commandLineParser)
@@ -40,14 +40,6 @@ namespace TEDCore.BuildPipeline
             PlayerSettings.Android.keystorePass = m_keystorePass;
             PlayerSettings.Android.keyaliasName = m_keyaliasName;
             PlayerSettings.Android.keyaliasPass = m_keyaliasPass;
-        }
-
-        public override string ToString()
-        {
-            return $"\n-keystoreName = {m_keystoreName}" +
-                $"\n-keystorePass = {m_keystorePass}" +
-                $"\n-keyaliasName = {m_keyaliasName}" +
-                $"\n-keyaliasPass = {m_keyaliasPass}";
         }
     }
 }

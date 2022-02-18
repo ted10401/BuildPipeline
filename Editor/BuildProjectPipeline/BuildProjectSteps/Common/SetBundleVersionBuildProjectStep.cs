@@ -14,23 +14,18 @@ namespace TEDCore.BuildPipeline
     }
 
     [Serializable, HideReferenceObjectPicker]
-    public class SetBundleVersionBuildProjectStep : IBuildProjectStep
+    public class SetBundleVersionBuildProjectStep : BuildProjectStep
     {
         [Command("-bundleVersion")]
         [SerializeField] private string m_bundleVersion = "0.0.1";
 
-        public void Execute(
+        public override void Execute(
             BuildTargetPathTracker buildTargetPathTracker,
             BuildOptionTracker buildOptionTracker,
             CommandLineParser commandLineParser)
         {
             commandLineParser?.Parse(this);
             PlayerSettings.bundleVersion = m_bundleVersion;
-        }
-
-        public override string ToString()
-        {
-            return $"-bundleVersion = {m_bundleVersion}";
         }
     }
 }

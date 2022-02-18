@@ -14,23 +14,18 @@ namespace TEDCore.BuildPipeline
     }
 
     [Serializable, HideReferenceObjectPicker]
-    public class SetAndroidBundleVersionCodeBuildProjectStep : IBuildProjectStep
+    public class SetAndroidBundleVersionCodeBuildProjectStep : BuildProjectStep
     {
         [Command("-androidBundleVersionCode")]
         [SerializeField] private int m_androidBundleVersionCode = 0;
 
-        public void Execute(
+        public override void Execute(
             BuildTargetPathTracker buildTargetPathTracker,
             BuildOptionTracker buildOptionTracker,
             CommandLineParser commandLineParser)
         {
             commandLineParser?.Parse(this);
             PlayerSettings.Android.bundleVersionCode = m_androidBundleVersionCode;
-        }
-
-        public override string ToString()
-        {
-            return $"-androidBundleVersionCode = {m_androidBundleVersionCode}";
         }
     }
 }

@@ -15,7 +15,7 @@ namespace TEDCore.BuildPipeline
     }
 
     [Serializable, HideReferenceObjectPicker]
-    public class SetTargetPathBuildProjectStep : IBuildProjectStep
+    public class SetTargetPathBuildProjectStep : BuildProjectStep
     {
         [Command("-targetPath")]
         [SerializeField] private string m_targetPath = default;
@@ -27,7 +27,7 @@ namespace TEDCore.BuildPipeline
             m_buildTarget = buildTarget;
         }
 
-        public void Execute(
+        public override void Execute(
             BuildTargetPathTracker buildTargetPathTracker,
             BuildOptionTracker buildOptionTracker,
             CommandLineParser commandLineParser)
@@ -101,11 +101,6 @@ namespace TEDCore.BuildPipeline
             result = result.Replace('/', Path.DirectorySeparatorChar);
 
             return result;
-        }
-
-        public override string ToString()
-        {
-            return $"-targetPath = {m_targetPath}";
         }
     }
 }

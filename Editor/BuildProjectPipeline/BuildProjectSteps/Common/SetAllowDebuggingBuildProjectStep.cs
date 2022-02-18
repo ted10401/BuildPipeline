@@ -14,12 +14,12 @@ namespace TEDCore.BuildPipeline
     }
 
     [Serializable, HideReferenceObjectPicker]
-    public class SetAllowDebuggingBuildProjectStep : IBuildProjectStep
+    public class SetAllowDebuggingBuildProjectStep : BuildProjectStep
     {
         [Command("-allowDebugging")]
         [SerializeField] private bool m_allowDebugging = true;
 
-        public void Execute(
+        public override void Execute(
             BuildTargetPathTracker buildTargetPathTracker,
             BuildOptionTracker buildOptionTracker,
             CommandLineParser commandLineParser)
@@ -34,11 +34,6 @@ namespace TEDCore.BuildPipeline
             {
                 buildOptionTracker.Remove(BuildOptions.AllowDebugging);
             }
-        }
-
-        public override string ToString()
-        {
-            return $"-allowDebuggin = {m_allowDebugging}";
         }
     }
 }

@@ -60,7 +60,7 @@ namespace TEDCore.BuildPipeline
             return string.Join(" ", m_commandLineArgs);
         }
 
-        internal void Parse(IBuildProjectStep buildStep)
+        internal void Parse(BuildProjectStep buildStep)
         {
             FieldInfo[] fieldInfos = buildStep.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             foreach (FieldInfo fieldInfo in fieldInfos)

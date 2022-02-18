@@ -14,12 +14,12 @@ namespace TEDCore.BuildPipeline
     }
 
     [Serializable, HideReferenceObjectPicker]
-    public class SetDevelopmentBuildProjectStep : IBuildProjectStep
+    public class SetDevelopmentBuildProjectStep : BuildProjectStep
     {
         [Command("-development")]
         [SerializeField] private bool m_development = true;
 
-        public void Execute(
+        public override void Execute(
             BuildTargetPathTracker buildTargetPathTracker,
             BuildOptionTracker buildOptionTracker,
             CommandLineParser commandLineParser)
@@ -34,11 +34,6 @@ namespace TEDCore.BuildPipeline
             {
                 buildOptionTracker.Remove(BuildOptions.Development);
             }
-        }
-
-        public override string ToString()
-        {
-            return $"-development = {m_development}";
         }
     }
 }

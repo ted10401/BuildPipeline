@@ -9,7 +9,7 @@ using UnityEngine;
 namespace TEDCore.BuildPipeline
 {
     [HideReferenceObjectPicker]
-    public class BuildProjectPipeline : Pipeline<BuildProjectPipeline, IBuildProjectStep>
+    public class BuildProjectPipeline : Pipeline<BuildProjectPipeline, BuildProjectStep>
     {
         public static BuildProjectPipeline Create(BuildTarget buildTarget)
         {
