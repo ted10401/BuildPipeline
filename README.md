@@ -2,10 +2,13 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/dauxio/daux.io/blob/master/LICENSE.md)
 [![Releases](https://img.shields.io/github/release/ted10401/BuildPipeline.svg)](https://github.com/ted10401/BuildPipeline/releases)
 
-The **BuildPipeline** module provides an easy way to customize the build pipeline.
+The **BuildPipeline** module provides an easy way to customize the build pipeline. The module is referenced by [**Mimiron Lite**](https://gitlab.com/rayark/mimiron-lite) and creates the Edtior Window with [**Odin Inspector**](https://odininspector.com/).
 
-Reguire:<br>
-[Odin - Inspector and Serializer](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041)
+**Reference**<br>
+[**Mimiron Lite**](https://gitlab.com/rayark/mimiron-lite)
+
+**Reguire**<br>
+[**Odin Inspector**](https://odininspector.com/)
 
 ## Menu Items
 TEDCore/Pipeline/Build Project Pipeline
@@ -129,5 +132,19 @@ namespace TEDCore.Pipeline
 ```
 <img src="GithubResources/01.Build_Project_Pipeline_Editor_Window.jpg" />
 
-## Example - Command Line Arguments
-"${UNITY_PATH}" -batchmode -projectPath "${PROJECT_PATH}" -executeMethod TEDCore.BuildPipeline.BuildProjectPipelineWindows64.Build -development true -allowDebugging true -buildVersion 1.0.0 -targetPath "${TARGET_PATH}"
+## Example - Batch Script
+```batch
+@echo off
+
+setlocal
+
+set UNITY_PATH=C:\Program Files\Unity\Hub\Editor\2019.2.12f1\Editor\Unity.exe
+set PROJECT_PATH=D:\YourProject
+set TARGET_PATH=C:\Users\UserName\Desktop\Build
+
+"%UNITY_PATH%" -batchmode -projectPath "%PROJECT_PATH%" -executeMethod TEDCore.BuildPipeline.BuildProjectPipelineWindows64.Build -development true -allowDebugging true -buildVersion 1.0.0 -targetPath "%TARGET_PATH%"
+
+endlocal
+
+pause
+```
