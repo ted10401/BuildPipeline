@@ -35,5 +35,10 @@ namespace TEDCore.BuildPipeline
                 buildOptionTracker.Remove(BuildOptions.Development);
             }
         }
+
+        public override string ToString()
+        {
+            return $"-development = {m_development}";
+        }
     }
 }

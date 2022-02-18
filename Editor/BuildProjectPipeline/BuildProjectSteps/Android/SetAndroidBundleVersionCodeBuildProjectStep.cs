@@ -27,5 +27,10 @@ namespace TEDCore.BuildPipeline
             commandLineParser?.Parse(this);
             PlayerSettings.Android.bundleVersionCode = m_androidBundleVersionCode;
         }
+
+        public override string ToString()
+        {
+            return $"-androidBundleVersionCode = {m_androidBundleVersionCode}";
+        }
     }
 }

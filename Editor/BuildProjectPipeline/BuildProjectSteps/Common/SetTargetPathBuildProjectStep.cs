@@ -102,5 +102,10 @@ namespace TEDCore.BuildPipeline
 
             return result;
         }
+
+        public override string ToString()
+        {
+            return $"-targetPath = {m_targetPath}";
+        }
     }
 }

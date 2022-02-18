@@ -27,5 +27,10 @@ namespace TEDCore.BuildPipeline
             commandLineParser?.Parse(this);
             PlayerSettings.bundleVersion = m_bundleVersion;
         }
+
+        public override string ToString()
+        {
+            return $"-bundleVersion = {m_bundleVersion}";
+        }
     }
 }

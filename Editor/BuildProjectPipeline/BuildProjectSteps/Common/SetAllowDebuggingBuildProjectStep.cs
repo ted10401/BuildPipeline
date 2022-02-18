@@ -35,5 +35,10 @@ namespace TEDCore.BuildPipeline
                 buildOptionTracker.Remove(BuildOptions.AllowDebugging);
             }
         }
+
+        public override string ToString()
+        {
+            return $"-allowDebuggin = {m_allowDebugging}";
+        }
     }
 }
