@@ -16,8 +16,8 @@ namespace TEDCore.BuildPipeline
             CommandLineParser commandLineParser = new CommandLineParser(commandLineArgs);
 
             BuildProjectPipeline projectBuilder = CreatePipeline();
-            BuildReport buildReport = projectBuilder.Execute(commandLineParser);
-            EditorApplication.Exit(buildReport.summary.result == BuildResult.Succeeded ? 0 : 1);
+            int result = projectBuilder.Execute(commandLineParser);
+            EditorApplication.Exit(result);
         }
 
         [CreateBuildProjectPipeline]

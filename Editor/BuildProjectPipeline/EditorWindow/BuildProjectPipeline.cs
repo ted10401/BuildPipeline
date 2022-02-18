@@ -25,7 +25,7 @@ namespace TEDCore.BuildPipeline
             m_buildTarget = buildTarget;
         }
 
-        public BuildReport Execute(CommandLineParser commandLineParser)
+        public int Execute(CommandLineParser commandLineParser)
         {
             BuildTargetPathTracker buildTargetPathTracker = new BuildTargetPathTracker();
             BuildOptionTracker buildOptionTracker = new BuildOptionTracker();
@@ -48,13 +48,13 @@ namespace TEDCore.BuildPipeline
             if (buildReport.summary.result != BuildResult.Succeeded)
             {
                 Debug.LogError($"BuildPipeline.BuildPlayer failed.");
+                return 1;
             }
             else
             {
                 EditorUtility.RevealInFinder(buildPlayerOptions.locationPathName);
+                return 0;
             }
-
-            return buildReport;
         }
 
         private static string[] GetSceneNames()

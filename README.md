@@ -62,7 +62,7 @@ using System;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 
-namespace TEDCore.Pipeline
+namespace TEDCore.BuildPipeline
 {
     public class BuildProjectPipelineWindows64
     {
@@ -76,8 +76,8 @@ namespace TEDCore.Pipeline
             CommandLineParser commandLineParser = new CommandLineParser(commandLineArgs);
 
             BuildProjectPipeline projectBuilder = CreatePipeline();
-            BuildReport buildReport = projectBuilder.Execute(commandLineParser);
-            EditorApplication.Exit(buildReport.summary.result == BuildResult.Succeeded ? 0 : 1);
+            int result = projectBuilder.Execute(commandLineParser);
+            EditorApplication.Exit(result);
         }
 
         [CreateBuildProjectPipeline]
