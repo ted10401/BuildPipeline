@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 
-namespace JSLCore.Pipeline
+namespace TEDCore.Pipeline
 {
     public class BuildProjectPipelineWindows64
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JSLCore.Pipeline
+namespace TEDCore.Pipeline
 {
     public class CreateBuildProjectPipelineAttribute : Attribute
     {

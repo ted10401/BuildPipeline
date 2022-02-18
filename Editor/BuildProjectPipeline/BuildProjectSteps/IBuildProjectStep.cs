@@ -1,5 +1,5 @@
 ﻿
-namespace JSLCore.Pipeline
+namespace TEDCore.Pipeline
 {
     public interface IBuildProjectStep
     {

@@ -6,7 +6,7 @@ The **BuildPipeline** module provides an easy way to customize the build pipelin
 The module need to cooperate with [Odin - Inspector and Serializer](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041).
 
 ## Menu Items
-Pipeline/Build Project Pipeline
+TEDCore/Pipeline/Build Project Pipeline
 
 ## Example - Set BuildOptions.Development Step
 ```csharp
@@ -15,7 +15,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace JSLCore.Pipeline
+namespace TEDCore.Pipeline
 {
     public static class SetDevelopmentBuildProjectStepUtility
     {
@@ -57,7 +57,7 @@ using System;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 
-namespace JSLCore.Pipeline
+namespace TEDCore.Pipeline
 {
     public class BuildProjectPipelineWindows64
     {
@@ -95,7 +95,7 @@ using System;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 
-namespace JSLCore.Pipeline
+namespace TEDCore.Pipeline
 {
     public class BuildProjectPipelineWindows64
     {

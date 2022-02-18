@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEditor;
 
-namespace JSLCore.Pipeline
+namespace TEDCore.Pipeline
 {
     public class BuildOptionTracker
     {
