@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Reflection;
 
-namespace TEDCore.Pipeline
+namespace JSLCore.BuildPipeline
 {
     public class CommandLineParser
     {

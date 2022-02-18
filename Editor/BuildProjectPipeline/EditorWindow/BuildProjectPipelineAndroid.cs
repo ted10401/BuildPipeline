@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 
-namespace TEDCore.Pipeline
+namespace JSLCore.BuildPipeline
 {
     public class BuildProjectPipelineAndroid
     {

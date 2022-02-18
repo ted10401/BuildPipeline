@@ -3,7 +3,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace TEDCore.Pipeline
+namespace JSLCore.BuildPipeline
 {
     public static class SetDevelopmentBuildProjectStepUtility
     {

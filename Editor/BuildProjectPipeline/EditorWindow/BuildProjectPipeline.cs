@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 
-namespace TEDCore.Pipeline
+namespace JSLCore.BuildPipeline
 {
     [HideReferenceObjectPicker]
     public class BuildProjectPipeline : Pipeline<BuildProjectPipeline, IBuildProjectStep>
@@ -39,12 +39,12 @@ namespace TEDCore.Pipeline
             {
                 scenes = GetSceneNames(),
                 locationPathName = buildTargetPathTracker.GetTargetPath(),
-                targetGroup = BuildPipeline.GetBuildTargetGroup(m_buildTarget),
+                targetGroup = UnityEditor.BuildPipeline.GetBuildTargetGroup(m_buildTarget),
                 target = m_buildTarget,
                 options = buildOptionTracker.GetBuildOptions()
             };
 
-            BuildReport buildReport = BuildPipeline.BuildPlayer(buildPlayerOptions);
+            BuildReport buildReport = UnityEditor.BuildPipeline.BuildPlayer(buildPlayerOptions);
             if (buildReport.summary.result != BuildResult.Succeeded)
             {
                 Debug.LogError($"BuildPipeline.BuildPlayer failed.");

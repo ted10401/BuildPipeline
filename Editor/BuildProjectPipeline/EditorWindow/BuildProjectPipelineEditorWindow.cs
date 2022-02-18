@@ -6,11 +6,11 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace TEDCore.Pipeline
+namespace JSLCore.BuildPipeline
 {
     public class BuildProjectPipelineEditorWindow : OdinEditorWindow
     {
-        [MenuItem("TEDCore/Pipeline/Build Project Pipeline")]
+        [MenuItem("JSLCore/Pipeline/Build Project Pipeline")]
         private static void Init()
         {
             EditorWindow editorWindow = GetWindow<BuildProjectPipelineEditorWindow>();

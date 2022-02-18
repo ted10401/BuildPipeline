@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-namespace TEDCore.Pipeline
+namespace JSLCore.BuildPipeline
 {
     public static class SetTargetPathBuildProjectStepUtility
     {
