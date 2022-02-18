@@ -95,6 +95,7 @@ namespace TEDCore.Pipeline
 
 ## Exmaple - Editor Window
 After you have created a new custom build project pipeline, if you want to create an Editor Window, you can add **[CreateBuildProjectPipeline]** attribute to the static method which returns **BuildProjectPipeline** and the Editor Window would create directly.
+
 <img src="GithubResources/01.Build_Project_Pipeline_Editor_Window.jpg" />
 
 ## Example - Batch Script
