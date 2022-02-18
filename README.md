@@ -128,3 +128,6 @@ namespace TEDCore.Pipeline
 }
 ```
 <img src="GithubResources/01.Build_Project_Pipeline_Editor_Window.jpg" />
+
+## Example - Command Line Arguments
+"${UNITY_PATH}" -batchmode -projectPath "${PROJECT_PATH}" -executeMethod TEDCore.BuildPipeline.BuildProjectPipelineWindows64.Build -development true -allowDebugging true -buildVersion 1.0.0 -targetPath "${TARGET_PATH}"
