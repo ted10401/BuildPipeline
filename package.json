@@ -11,3 +11,36 @@
     "url": "https://github.com/ted10401"
   }
 }
+{
+  "name": "com.tedcore.buildpipeline",
+  "version": "1.0.0",
+  "displayName": "Build Pipeline",
+  "description": "Provides an easy way to create custom build pipeline with command line args.",
+  "unity": "2019.2",
+  "unityRelease": "12f1",
+  "license": "MIT",
+  "category": "JSLCore",
+  "dependencies": {},
+  "samples": [
+    {
+        "displayName": "Android Sample",
+        "path": "Samples~/Android Sample"
+    },
+    {
+        "displayName": "MacOSX Sample",
+        "path": "Samples~/MacOSX Sample"
+    },
+    {
+        "displayName": "Windows64 Sample",
+        "path": "Samples~/Windows64 Sample"
+    }
+  ],
+  "keywords": [
+    "JSLCore"
+  ],
+  "author": {
+    "name": "Ted Sie",
+    "email": "ted10401@livemail.tw",
+    "url": "https://github.com/ted10401"
+  }
+}
